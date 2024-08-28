@@ -3,9 +3,8 @@ package ru.eddyz.telegramposterbrinkman.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import ru.eddyz.telegramposterbrinkman.util.enums.PostMode;
 import ru.eddyz.telegramposterbrinkman.util.enums.PostType;
-
-import java.util.List;
 
 @Entity
 @Table(name = "post")
@@ -30,6 +29,16 @@ public class Post {
 
     @Column(name = "status")
     private boolean status;
+
+    @Column(name = "file_id")
+    private String fileId;
+
+    @Column(name = "count")
+    private int count;
+
+    @Column(name = "post_mode")
+    @Enumerated(EnumType.STRING)
+    private PostMode postMode;
 
     @Column(name = "post_type")
     @Enumerated(EnumType.STRING)

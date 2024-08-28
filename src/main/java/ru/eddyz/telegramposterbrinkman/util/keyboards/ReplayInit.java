@@ -12,8 +12,7 @@ public class ReplayInit {
 
     public static ReplyKeyboardMarkup defaultKey() {
         List<KeyboardRow> rows = createRows(
-                createdRow(ReplayButton.CREATE_POST.toString(), ReplayButton.SELECT_ACTIVE_POST.toString()),
-                createdRow(ReplayButton.ADD_CHANEL.toString(), ReplayButton.SHOW_CHANNELS.toString())
+                createdRow(ReplayButton.CREATE_POST.toString(), ReplayButton.SELECT_ACTIVE_POST.toString())
         );
         return ReplyKeyboardMarkup.builder()
                 .resizeKeyboard(true)
